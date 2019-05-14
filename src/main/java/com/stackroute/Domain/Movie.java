@@ -48,5 +48,19 @@ public class Movie implements InitializingBean, DisposableBean {
     public void destroy() throws Exception {
         System.out.println("bean has bean destroyed......");
     }
+
+
+
+    //2nd way to call initi and destroy methhod through xml file....
+    public void myInit ()
+    {
+        System.out.println("my beans have been initialized...");
+    }
+    public void myDestroy ()
+    {
+        System.out.println("my beans have been destroyed...");
+    }
+
+
 }
 
