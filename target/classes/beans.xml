@@ -7,16 +7,6 @@
     <!-- bean definitions here -->
 
 
-   <!-- bean for autowire byName-->
-    <bean id="movie"  class="com.stackroute.Domain.Movie">
-       <property name="actor" ref="Actor"/>
-    </bean>
-   <bean id="Actor" class="com.stackroute.Domain.Actor">
-       <constructor-arg type="String" value="khushbu"/>
-       <constructor-arg type="String" value="female"/>
-       <constructor-arg type="int" value="24"/>
-   </bean>
-
 
     <!--bean for autowire byType-->
 <!--    <bean id="movie1"  autowire="byType" class="com.stackroute.Domain.Movie">-->
@@ -32,7 +22,8 @@
 
 
     <!--bean for autowire byConstructor-->
-    <bean id="movie2" autowire="byName" class="com.stackroute.Domain.Movie">
+    <bean id="movie2"  class="com.stackroute.Domain.Movie" scope="prototype">
+        <property name="actor" ref="actor"/>
     </bean>
     <bean id="actor" class="com.stackroute.Domain.Actor">
         <property name="name" value="salman"/>

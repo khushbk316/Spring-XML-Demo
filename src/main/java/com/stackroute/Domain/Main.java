@@ -14,12 +14,6 @@ import org.springframework.core.io.Resource;
 public class Main {
 
         public static void main(String[] args) {
-            Resource resource = new ClassPathResource("beans.xml");
-            BeanFactory beanFactory = new XmlBeanFactory(resource);
-
-            Movie movie1 = (Movie) beanFactory.getBean("movie");  /* Lazy instantiation */
-            System.out.println("using beanfactory.....");
-            System.out.println(movie1);
 
 //Application context.........
 
