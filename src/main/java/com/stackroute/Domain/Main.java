@@ -15,44 +15,17 @@ public class Main {
 
         public static void main(String[] args) {
 
-            // Using XML Bean factory
-
-            System.out.println("\n******Using Bean Factory******");
-
-            Resource resource = new ClassPathResource("beans.xml");
-            BeanFactory beanFactory = new XmlBeanFactory(resource);
-
-            Movie movie1 = (Movie) beanFactory.getBean("movie1");  /* Lazy instantiation */
-
-            System.out.println(movie1);
-
-
-            //Using Spring 3.2 BeanDefinitionRegistry and BeanDefinitionReader
-
-
-            System.out.println("\n******Using BeanDefinitionRegistry and BeanDefinitionReader******");
-
-            BeanDefinitionRegistry beanDefinitionRegistry = new DefaultListableBeanFactory();
-            BeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanDefinitionRegistry);
-            beanDefinitionReader.loadBeanDefinitions(new ClassPathResource("beans.xml"));
-            Movie movie2=(Movie) ((DefaultListableBeanFactory) beanDefinitionRegistry).getBean("movie2");
-
-            System.out.println(movie2);
-
-
-            //Using Application context
-
-            System.out.println("\n******Using Application context******");
-
 
             ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
-            Movie movie3 = (Movie) context.getBean("movie3");
+            Movie movie = (Movie) context.getBean("movie");
 
-            System.out.println(movie3);
+            System.out.println(movie);
+            Movie movie1 = (Movie) context.getBean("movie1");
 
+            System.out.println(movie1);
+            Movie movie2 = (Movie) context.getBean("movie2");
 
-
-
+            System.out.println(movie2);
 
         }
     }

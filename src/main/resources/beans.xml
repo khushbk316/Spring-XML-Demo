@@ -5,31 +5,31 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="movie1" class="com.stackroute.Domain.Movie">
+    <bean id="movie" class="com.stackroute.Domain.Movie">
         <property name="actor" ref="actor1"/>
     </bean>
    <bean id="actor1" class="com.stackroute.Domain.Actor">
-       <property name="name" value="khushbu"/>
-       <property name="gender" value="female"/>
-       <property name="age" value="24"/>
+       <constructor-arg name="name" value="khushbu"/>
+       <constructor-arg name="gender" value="female"/>
+       <constructor-arg name="age" value="24"/>
    </bean>
 
-    <bean id="movie2" class="com.stackroute.Domain.Movie">
+    <bean id="movie1" class="com.stackroute.Domain.Movie">
         <property name="actor" ref="actor2"/>
     </bean>
     <bean id="actor2" class="com.stackroute.Domain.Actor">
-        <property name="name" value="shahrukh"/>
-        <property name="gender" value="male"/>
-        <property name="age" value="30"/>
+        <constructor-arg type="String" value="shahrukh"/>
+        <constructor-arg type="String" value="male"/>
+        <constructor-arg type="int" value="30"/>
     </bean>
 
-    <bean id="movie3" class="com.stackroute.Domain.Movie">
+    <bean id="movie2" class="com.stackroute.Domain.Movie">
         <property name="actor" ref="actor3"/>
     </bean>
     <bean id="actor3" class="com.stackroute.Domain.Actor">
-        <property name="name" value="salman"/>
-        <property name="gender" value="male"/>
-        <property name="age" value="40"/>
+        <constructor-arg index="0" value="salman"/>
+        <constructor-arg index="1" value="male"/>
+        <constructor-arg index="2" value="40"/>
     </bean>
 </beans>
 
