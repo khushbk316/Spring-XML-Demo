@@ -14,7 +14,7 @@
        <constructor-arg name="age" value="24"/>
    </bean>
 
-    <bean id="movie1" class="com.stackroute.Domain.Movie">
+    <bean name="movie1,movie2" class="com.stackroute.Domain.Movie">
         <property name="actor" ref="actor2"/>
     </bean>
     <bean id="actor2" class="com.stackroute.Domain.Actor">
@@ -23,9 +23,9 @@
         <constructor-arg type="int" value="30"/>
     </bean>
 
-    <bean id="movie2" class="com.stackroute.Domain.Movie">
-        <property name="actor" ref="actor3"/>
-    </bean>
+<!--    <bean id="movie2" class="com.stackroute.Domain.Movie">-->
+<!--        <property name="actor" ref="actor3"/>-->
+<!--    </bean>-->
     <bean id="actor3" class="com.stackroute.Domain.Actor">
         <constructor-arg index="0" value="salman"/>
         <constructor-arg index="1" value="male"/>

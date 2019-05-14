@@ -26,6 +26,7 @@ public class Main {
             Movie movie2 = (Movie) context.getBean("movie2");
 
             System.out.println(movie2);
+            System.out.println(movie==movie1);
 
         }
     }
