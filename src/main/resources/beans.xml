@@ -18,6 +18,8 @@
 <!--        <constructor-arg type="int" value="30"/>-->
 <!--    </bean>-->
 
+    <!--creating one bean for calling displaybeanname class.....-->
+    <bean class="com.stackroute.Domain.BeanPostProcessorDemoBean"></bean>
 
 
 
