@@ -29,6 +29,7 @@ public class Main {
             System.out.println(movie);
             System.out.println(actor);
 
+            // Printing Actor and Movie Details
 
         }
     }
