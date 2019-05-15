@@ -23,7 +23,7 @@
 
 
 
-    <!--bean for autowire byConstructor-->
+    <!--bean for autowire byConstructors-->
     <bean id="movie2"  class="com.stackroute.Domain.Movie" scope="prototype" init-method="myInit" destroy-method="myDestroy">
         <property name="actor" ref="actor"/>
     </bean>
